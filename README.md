@@ -78,7 +78,7 @@ Operational logic is not included in the public version.
 This project is licensed under:
 
 ### VNAGY CC BY‑NC‑ND 4.0 — Code Edition (2026)  
-© Viktorija Nad
+© Viktorija Nađ
 
 #### Allowed:
 - reading the code  
@@ -128,7 +128,7 @@ Operational modules are private.
   Josip Juraj Strossmayer University of Osijek, Department of Physics  
   Completed: 2024  
   Academic title: University Master of Education in Physics and Computer Science  
-  Focus areas: system architecture, security engineering, deterministic model design
+
 
 
 

@@ -122,7 +122,7 @@ Operational modules are private.
   Josip Juraj Strossmayer University of Osijek, Department of Physics  
   Completed: 2021  
   Academic title: University Bachelor of Physics (Sveučilišna prvostupnica fizike)  
-  Credits: 180 ECTS
+  
 
 - **Master of Physics and Computer Science**  
   Josip Juraj Strossmayer University of Osijek, Department of Physics  

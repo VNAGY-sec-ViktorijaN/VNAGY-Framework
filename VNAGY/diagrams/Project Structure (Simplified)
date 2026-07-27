@@ -1,0 +1,40 @@
+vnagy/
+├── ui/
+│   ├── flutter/        # Mobile UI (Android & iOS)
+│   ├── kotlin/         # Mobile service layer
+│   └── tauri/          # Desktop UI (Windows, Linux, macOS)
+│       ├── webui/      # Desktop frontend (local rendering)
+│       └── src-tauri/  # Desktop backend (Rust)
+│
+├── agent/
+│   ├── config/         # Agent configuration
+│   ├── integration/    # OS-level integration points
+│   ├── src/            # Agent runtime logic
+│   └── tests/          # Agent testing suite
+│
+├── agent-installer/
+│   ├── config-generator/   # Installer configuration builder
+│   ├── device-detection/   # Platform and hardware detection
+│   ├── module-selection/   # Module selection logic
+│   └── prof/               # Profiling and environment checks
+│
+├── core/
+│   ├── engine/         # Rust core engine
+│   ├── modules/        # Modular system extensions
+│   ├── scoring/        # Security scoring layer
+│   └── offline-first/  # Local processing and storage
+│
+├── processing/
+│   ├── heuristics/     # Analytical models (Python)
+│   ├── correlation/    # Correlation flows
+│   └── pipelines/      # Data processing pipelines
+│
+├── integration/
+│   ├── api/            # Integration interfaces
+│   ├── adapters/       # Data transformation
+│   └── bridges/        # Cross-layer communication
+│
+└── installer/
+    ├── mobile/         # Mobile build outputs
+    └── desktop/        # Desktop build outputs (MSI, DMG, AppImage)
+

@@ -1,1 +1,25 @@
+# Build output
+/dist
+/build
+/target
 
+# IDE configs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temp
+*.log
+*.tmp
+*.swp
+
+# LibreOffice Writer lock files
+*.~lock.*#
+
+# Rust specific
+/target/
+Cargo.lock

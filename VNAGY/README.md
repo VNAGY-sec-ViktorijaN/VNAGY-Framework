@@ -126,6 +126,7 @@ Operational modules are private.
   Josip Juraj Strossmayer University of Osijek, Department of Physics  
   Completed: 2021  
   Academic title: University Bachelor of Physics
+  
   https://www.linkedin.com/in/viktorija-na%C4%91-1b981530b/overlay/Project/790770286/treasury/?profileId=ACoAAE73A90B_Nnntu2shCFdniU912iMo-u7KzQ
   
 
@@ -133,6 +134,7 @@ Operational modules are private.
   Josip Juraj Strossmayer University of Osijek, Department of Physics  
   Completed: 2024
   Academic title: University Master of Education in Physics and Computer Science
+  
   https://www.linkedin.com/in/viktorija-na%C4%91-1b981530b/overlay/Project/789961957/treasury/?profileId=ACoAAE73A90B_Nnntu2shCFdniU912iMo-u7KzQ
 
 

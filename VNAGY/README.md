@@ -101,8 +101,8 @@ Full license text is available in the LICENSE ( https://github.com/VNAGY-sec-Vik
 
 Included documentation:
 
-- VNAGY Coding Standard Specification  
-- Offline‑First Architecture  
+- VNAGY Coding Standard Specification ( https://github.com/VNAGY-sec-ViktorijaN/VNAGY-Framework/blob/main/VNAGY/whitepapers/VNAGY%20Coding%20Standard%20Specification.pdf )
+- Offline‑First Architecture ( https://github.com/VNAGY-sec-ViktorijaN/VNAGY-Framework/blob/main/VNAGY/whitepapers/VNAGY%20Secure%E2%80%91First%20Conceptual%20Architecture%20Specification.pdf ) 
 - Behavior‑Engine Model  
 - STRIDE & MITRE Mapping  
 - Conceptual heuristics (non-operational)

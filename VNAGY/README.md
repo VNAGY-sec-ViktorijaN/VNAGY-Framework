@@ -3,6 +3,7 @@
 A modular offline‑first security framework for local behavioral correlation, signal analysis, and deterministic anomaly evaluation.  
 VNAGY is a non‑reconstructable, isolated, and concept‑only public repository. Operational logic is private.
 
+
 ## RD — Repository Description
 
 This repository contains the public, non‑operational components of the VNAGY security framework.
@@ -108,6 +109,9 @@ Included documentation:
 - Conceptual heuristics (non-operational)
 
 All documentation is symbolic and non‑reconstructable.
+Publishing the symbolic specification of the VNAGY Secure‑First Architecture.
+The document defines non‑computational constructs (Σ, B, Δ, S, H, C, R) with no interaction, no transformation, no computation, and no algorithmic semantics.
+The model contains no thresholds, weights, transitions, or operational parameters.
 
 ## Project Status
 
@@ -126,8 +130,10 @@ Operational modules are private.
 
 - **Master of Physics and Computer Science**  
   Josip Juraj Strossmayer University of Osijek, Department of Physics  
-  Completed: 2024  
-  Academic title: University Master of Education in Physics and Computer Science  
+  Completed: 2024
+  https://www.linkedin.com/in/viktorija-na%C4%91-1b981530b/overlay/Project/789961957/treasury/?profileId=ACoAAE73A90B_Nnntu2shCFdniU912iMo-u7KzQ
+  Academic title: University Master of Education in Physics and Computer Science
+  https://www.linkedin.com/in/viktorija-na%C4%91-1b981530b/overlay/Project/790770286/treasury/?profileId=ACoAAE73A90B_Nnntu2shCFdniU912iMo-u7KzQ  
 
 
 

@@ -95,7 +95,7 @@ This project is licensed under:
 - rebranding  
 - operational reconstruction
 
-Full license text is available in the LICENSE file.
+Full license text is available in the LICENSE ( https://github.com/VNAGY-sec-ViktorijaN/VNAGY-Framework/tree/main/VNAGY/LICENSE ) directory.
 
 ## Documentation
 

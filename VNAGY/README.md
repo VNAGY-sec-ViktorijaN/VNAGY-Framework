@@ -121,7 +121,7 @@ Operational modules are private.
 - **Bachelor of Physics**  
   Josip Juraj Strossmayer University of Osijek, Department of Physics  
   Completed: 2021  
-  Academic title: University Bachelor of Physics (Sveučilišna prvostupnica fizike)  
+  Academic title: University Bachelor of Physics 
   
 
 - **Master of Physics and Computer Science**  

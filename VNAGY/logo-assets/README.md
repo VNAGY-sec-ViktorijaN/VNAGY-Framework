@@ -6,7 +6,7 @@ It provides a structured, platform‑specific collection of icons, logos, splash
 The contents of this directory are design assets only.  
 No executable code or implementation logic is stored here.
 
-All files in this directory — including PNG, SVG, ICO, and all UX/UI design documents — are protected under the **VNAGY Visual Asset License (2026)**.  
+All files in this directory — including PNG, SVG, ICO, and all UX/UI design documents — are protected under the **VNAGY CC BY‑NC 4.0 Extended Asset License (2026)**.  
 The full license text is available in the `LICENSE/` directory.  
 This license prohibits unauthorized redistribution, modification, or commercial use of any visual asset contained here.
 

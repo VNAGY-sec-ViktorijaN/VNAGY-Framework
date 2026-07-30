@@ -53,7 +53,8 @@ logo-assets/
 └── installer-screens/
 ├── welcome-screen.png
 ├── installing-screen.png
-
+├── finished-screen.png
+└── screen-flow.md
 
 ---
 
@@ -95,6 +96,3 @@ The license prohibits:
 Refer to the `LICENSE/` directory for the complete license text.
 
 
-
-├── finished-screen.png
-└── screen-flow.md

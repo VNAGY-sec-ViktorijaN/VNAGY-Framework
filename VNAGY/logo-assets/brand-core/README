@@ -1,0 +1,36 @@
+# VNAGY Brand Core
+
+This directory contains the canonical, locked elements of the VNAGY visual identity.  
+All files in `brand-core/` represent official, stable, and technically precise versions of the VNAGY brand.
+
+---
+
+## Contents
+
+### Logo Assets
+- **logo-primary.svg** — primary VNAGY logo (full mark, multi‑color)  
+- **logo-minimal.svg** — primary logo without the secondary tagline  
+- **logo-monochrome.svg** — full logo in a single color (technical fallback)
+
+### Brand Specification
+- **color-palette.md** — official VNAGY color palette (monochrome system)  
+- **typography.md** — typographic standards  
+- **spacing-grid.md** — spacing, grid, and proportional system
+
+---
+
+## Purpose
+
+`brand-core/` defines:
+- the stable VNAGY visual elements  
+- logo usage rules  
+- technical brand parameters  
+- a minimal, deterministic, security‑oriented aesthetic  
+
+This directory serves as the **single source of truth** for all VNAGY visual components.
+
+---
+
+## License
+
+All VNAGY visual assets — including logos, palettes

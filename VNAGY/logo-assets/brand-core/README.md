@@ -33,4 +33,19 @@ This directory serves as the **single source of truth** for all VNAGY visual com
 
 ## License
 
-All VNAGY visual assets — including logos, palettes
+All VNAGY visual assets — including logos, palettes, typography, and documentation in this directory — are licensed under:
+
+**VNAGY CC BY‑NC 4.0 Extended Asset License (2026)**
+
+This license extends the standard CC BY‑NC 4.0 model with additional restrictions for security‑critical, technical, and brand‑specific assets.
+
+Full license text is available here:  
+`/LICENSE`
+
+---
+
+## Notice
+
+If VNAGY visual elements are used in other parts of the repository, applications, installers, or documentation, **only the versions stored in `brand-core/` may be used**.
+
+This directory is the **canonical** and **authoritative** source of VNAGY identity.

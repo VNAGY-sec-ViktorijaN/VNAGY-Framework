@@ -130,7 +130,7 @@ https://github.com/VNAGY-sec-ViktorijaN/VNAGY-Framework/tree/main/VNAGY/LICENSE
 
 ---
 
-## Documentation
+
 
 - VNAGY Coding Standard Specification  
 - Offline‑First Architecture  

@@ -53,6 +53,7 @@ It serves as a structural reference, documentation hub, and conceptual showcase.
 
 ---
 
+## RM — Repository Modules
 core/
 ├─ C-Pack/          # UI interaction signals
 ├─ L-Pack/          # Log & monitoring events
@@ -130,7 +131,7 @@ https://github.com/VNAGY-sec-ViktorijaN/VNAGY-Framework/tree/main/VNAGY/LICENSE
 
 ---
 
-
+## Documentation
 
 - VNAGY Coding Standard Specification  
 - Offline‑First Architecture  
@@ -172,5 +173,9 @@ This README follows VNAGY README Rules:
 - MUST contain: Purpose, Contents, Dependencies, Constraints  
 - MUST NOT contain: narrative text, implementation details, personal notes
 
-## RM — Repository Modules
+  
+
+
+
+
 

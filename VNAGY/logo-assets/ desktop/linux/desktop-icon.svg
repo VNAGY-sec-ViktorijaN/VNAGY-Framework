@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+
+  <g transform="translate(350, 0)">
+
+    <!-- HEARTBEAT LINE – bijela -->
+    <path
+      d="M 80 185
+         L 180 185
+         L 210 215
+         L 240 155
+         L 270 215
+         L 300 185
+         L 400 185"
+      stroke="white"
+      stroke-width="4"
+      fill="none"
+    />
+
+    <!-- MASKA -->
+    <mask id="cutout">
+      <rect x="0" y="0" width="1100" height="720" fill="white"/>
+
+      <!-- HEARTBEAT SHAPE – crni u maski -->
+      <path
+        d="M 80 185
+           L 180 185
+           L 210 215
+           L 240 155
+           L 270 215
+           L 300 185
+           L 400 185
+           L 400 190
+           L 80 190
+           Z"
+        fill="black"
+      />
+
+      <!-- V – crni u maski -->
+      <text
+        x="236.3"
+        y="309.5"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="Winner Sans Wide Extra Bold"
+        font-size="200"
+        fill="black">
+        V
+      </text>
+    </mask>
+
+    <!-- ŠTIT – crna unutrašnjost + bijeli rub -->
+    <path
+      d="M 240 115
+         L 110 127.5
+         Q 120 340 240 388.5
+         Q 360 340 370 127.5
+         L 240 115 Z"
+      fill="black"
+      stroke="white"
+      stroke-width="8.0"
+      stroke-linejoin="round"
+      mask="url(#cutout)"
+    />
+
+    <!-- V – bijeli, vidljiv izvan maske -->
+    <text
+      x="236.3"
+      y="309.5"
+      text-anchor="middle"
+      dominant-baseline="middle"
+      font-family="Winner Sans Wide Extra Bold"
+      font-size="200"
+      fill="white"
+      stroke="white"
+      stroke-width="14.0"
+      stroke-linejoin="round">
+        V
+    </text>
+
+  </g>
+
+</svg>
+

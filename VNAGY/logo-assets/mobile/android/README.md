@@ -33,6 +33,9 @@ Licensed under **VNAGY CC BY-NC 4.0 Extended License**.
 Short documents may use **VNAGY Minimal License (PSDL‑1.3)**.  
 © **Viktorija Nađ, 2026 — All Rights Reserved.**
 
+
+The full license text is located in the **LICENSE** directory.
+
 ## Script: Generate mipmap-anydpi-v26
 The following script creates the required directory and places the adaptive icon
 XML declaration inside it.
@@ -52,5 +55,4 @@ cat <<EOF > "$TARGET_DIR/ic_launcher.xml"
 EOF
 
 
-The full license text is located in the **LICENSE** directory.
 

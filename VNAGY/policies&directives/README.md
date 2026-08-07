@@ -37,7 +37,7 @@ Policies do not define algorithms, thresholds, or operational logic.
 Directives define system‑wide mandatory conditions that apply to the entire VNAGY architecture.
 
 Included directives:
-- VNAGY‑OFD‑1.0 — Offline‑First Directive  
+- VNAGY‑OFD‑001 — Offline‑First Directive  
 
 Directives apply to:
 - global system behavior  
@@ -84,7 +84,7 @@ Usage restrictions include:
 - No commercial deployment  
 - No algorithmic extraction  
 
-© VNAGY Labs — All Rights Reserved
+© Viktorija Nađ — All Rights Reserved
 
 ---
 

@@ -76,7 +76,7 @@ All documents in this directory are licensed under:
 
 **VNAGY CC BY‑NC 4.0 Extended License**  
 and  
-**VNAGY Minimal License RS51.143** (for short normative documents)
+**VNAGY Minimal License (PSDL-1.3)** (for short normative documents)
 
 Usage restrictions include:
 - No reconstruction  

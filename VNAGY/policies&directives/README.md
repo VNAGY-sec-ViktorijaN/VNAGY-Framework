@@ -17,11 +17,11 @@ All documents in this section are binding, non‑algorithmic, and non‑reconstr
 Policies define localized mandatory rules for specific VNAGY subsystems.
 
 Included policies:
-- VNAGY‑AIP‑001 — AI Isolation Policy  
-- VNAGY‑MIP‑002 — Modular Interaction Policy  
-- VNAGY‑BEC‑001 — Behavior Engine Constraints  
-- VNAGY‑HSM‑001 — Heuristic Scoring Model  
-- VNAGY‑KCF‑001 — Killing Chain Format  
+- VNAGY‑AIP‑002 — AI Isolation Policy  
+- VNAGY‑MIP‑003 — Modular Interaction Policy  
+- VNAGY‑BEC‑005 — Behavior Engine Constraints  
+- VNAGY‑HSM‑004 — Heuristic Scoring Model  
+- VNAGY‑KCF‑006 — Killing Chain Format  
 
 Policies apply to:
 - module behavior  

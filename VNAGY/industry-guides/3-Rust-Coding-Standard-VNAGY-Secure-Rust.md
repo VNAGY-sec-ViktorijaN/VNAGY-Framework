@@ -125,7 +125,7 @@ Why Good?
 
 * Easy to audit.
 
-3.2.1 Minimalism Verification (Practice)
+#### 3.2.1 Minimalism Verification (Practice)
 
 How developers can verify that code violates minimalism.
 
@@ -199,7 +199,7 @@ Why Good?
 
 * Predictable behavior.
 
-3.3.1 State Determinism Verification (Practice)
+#### 3.3.1 State Determinism Verification (Practice)
 
 How developers can verify nondeterministic state behavior.
 
@@ -264,9 +264,9 @@ fn execute() {
 
 ---
 
-## 3.4.1 Static Structure Verification (Enterprise Practice)
+#### 3.4.1 Static Structure Verification (Enterprise Practice)
 
-### **Static Structure Test Pattern**
+ **Static Structure Test Pattern**
 
 ```rust
 fn verify_static<F>(f: F)
@@ -318,7 +318,7 @@ fn parse(x: &str) -> Result<i32, ParseError> {
 ```
 
 
-## 3.5.1 Error Determinism Verification (Practice)
+#### 3.5.1 Error Determinism Verification (Practice)
 
 ### **Bad Error Test (Silent Fallback)**
 

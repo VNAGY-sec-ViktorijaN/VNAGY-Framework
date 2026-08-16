@@ -85,6 +85,8 @@ Why This Matters
 
 * Nondeterministic modules must be rejected.
 
+---
+
 ## 3.2 Rust Minimalism
 
 Minimalism reduces complexity, attack surface, and cognitive load.  
@@ -149,6 +151,8 @@ Why This Helps
 * Over-engineered logic becomes visible.
 
 * VNAGY pipelines can reject functions that perform unnecessary transformations.
+
+---
 
 ## 3.3 Explicit Rust State
 
@@ -313,7 +317,6 @@ fn parse(x: &str) -> Result<i32, ParseError> {
 }
 ```
 
----
 
 ## 3.5.1 Error Determinism Verification (Practice)
 

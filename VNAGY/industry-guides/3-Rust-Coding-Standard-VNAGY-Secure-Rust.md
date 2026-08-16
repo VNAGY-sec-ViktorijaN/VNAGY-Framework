@@ -356,13 +356,15 @@ Why This Matters
 
 * No silent fallback.
 
+* VNAGY pipelines can reject hidden error logic.
+
 ## Licensing
 
 Licensed under VNAGY CC BY‑NC 4.0 Extended License.
+
 Short documents may use VNAGY Minimal License (PSDL‑1.3).
 © Viktorija Nađ, 2026 — All Rights Reserved.
 
 License files are available here:
 https://github.com/VNAGY-sec-ViktorijaN/VNAGY-Framework/tree/main/VNAGY/LICENSE
 
-* VNAGY pipelines can reject hidden error logic.

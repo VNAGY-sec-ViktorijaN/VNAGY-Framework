@@ -11,13 +11,13 @@ Rust encourages deterministic behavior, but VNAGY forbids randomness, implicit I
 
 Bad Example (Non-Deterministic)
 
-rust
+'''rust
 use rand::Rng;
 fn adjust(x: i32) -> i32 {
     let mut rng = rand::thread_rng();
     x + rng.gen_range(0..5)
 }
-
+'''
 Good Example (Deterministic)
 
 fn adjust(x: i32) -> i32 {

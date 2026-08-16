@@ -19,26 +19,71 @@ fn adjust(x: i32) -> i32 {
 }
 ```
 
-###Good Example (Deterministic)
+### Good Example (Deterministic)
 ```rust
-
 fn adjust(x: i32) -> i32 {
     x + 2
 }
 ```
 Why Bad?
 
-    Randomness breaks determinism.
+* Randomness breaks determinism.
 
-    Output cannot be reproduced.
+* Output cannot be reproduced.
 
-    Violates VNAGY offline-first predictability.
+* Violates VNAGY offline-first predictability.
 
 Why Good?
 
-    Fully deterministic.
+* Fully deterministic.
 
-    Minimal and explicit.
+* Minimal and explicit.
 
-    Safe for offline-first pipelines.
+* Safe for offline-first pipelines.
+
+#### 3.1.1 Determinism Verification
+
+How developers can verify nondeterministic Rust code.
+
+Determinism Test Pattern (Rust)
+
+```rust
+fn verify_determinism<F>(f: F)
+where
+    F: Fn(i32) -> i32,
+{
+    let input = 10;
+    let first = f(input);
+    let second = f(input);
+
+    if first != second {
+        println!("Nondeterministic: {} vs {}", first, second);
+    } else {
+        println!("Deterministic.");
+    }
+}
+```
+Usage
+```rust
+fn main() {
+    verify_determinism(adjust);
+}
+```
+Expected Output for Bad Code
+
+    Nondeterministic: 12 vs 14.
+
+Expected Output for Good Code
+
+    Deterministic.
+
+Why This Matters
+
+* Teams can automatically detect nondeterminism.
+
+* Offline-first systems require reproducibility.
+
+* Nondeterministic modules must be rejected.
+
+
 

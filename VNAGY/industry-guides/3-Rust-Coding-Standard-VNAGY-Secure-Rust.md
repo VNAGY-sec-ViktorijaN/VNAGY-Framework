@@ -150,6 +150,85 @@ Why This Helps
 
 * VNAGY pipelines can reject functions that perform unnecessary transformations.
 
+## 3.3 Explicit Rust State
+
+State MUST be visible, controlled, and local. Global mutable state is strictly forbidden.
+
+### Bad Example (Hidden Global State)
+
+``` rust
+static mut COUNTER: u32 = 0;
+fn next() -> u32 {
+    unsafe {
+        COUNTER += 1;
+        COUNTER
+    }
+}
+```
+### Good Example (Explicit State)
+
+``` rust
+struct Counter {
+    value: u32,
+}
+
+impl Counter {
+    fn next(&mut self) -> u32 {
+        self.value += 1;
+        self.value
+    }
+}
+```
+Why Bad?
+
+* Hidden mutation.
+
+* Unsafe block.
+
+* Non-deterministic under concurrency.
+
+Why Good?
+
+* State is explicit.
+
+* No unsafe.
+
+* Predictable behavior.
+
+3.3.1 State Determinism Verification (Practice)
+
+How developers can verify nondeterministic state behavior.
+
+Bad State Test (Global Mutable)
+rust
+
+fn verify_state() {
+    let first = next();
+    let second = next();
+    println!("First: {}, Second: {}", first, second);
+}
+
+Expected Output
+
+    First: 1, Second: 2
+
+This proves nondeterminism because the output depends on hidden state.
+
+Good State Test (Explicit Struct)
+
+``` rust
+fn verify_state() {
+    let mut counter = Counter { value: 0 };
+    let first = counter.next();
+    let second = counter.next();
+    println!("First: {}, Second: {}", first, second);
+}
+```
+Expected Output
+
+    First: 1, Second: 2
+
+But here the nondeterminism is explicit, controlled, and predictable.
 
 
 

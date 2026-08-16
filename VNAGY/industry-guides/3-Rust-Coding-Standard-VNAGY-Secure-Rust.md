@@ -200,14 +200,15 @@ Why Good?
 How developers can verify nondeterministic state behavior.
 
 Bad State Test (Global Mutable)
-rust
+
+```rust
 
 fn verify_state() {
     let first = next();
     let second = next();
     println!("First: {}, Second: {}", first, second);
 }
-
+```
 Expected Output
 
     First: 1, Second: 2

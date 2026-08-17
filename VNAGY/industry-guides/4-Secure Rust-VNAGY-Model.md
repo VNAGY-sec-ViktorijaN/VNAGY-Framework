@@ -317,17 +317,16 @@ VNAGY concurrency is symbolic, not operational:
 
 Concurrency is represented mathematically, not executed.
 
-```Bad Example (Thread Race)
-rust
+### Bad Example (Thread Race)
+```rust
 use std::thread;
-
 fn race() {
     let mut x = 0;
     thread::spawn(|| { x += 1; });
 }
 ```
 
-Good Example (Symbolic Concurrency)
+### Good Example (Symbolic Concurrency)
 
 ```rust
 fn symbolic_concurrency(input: i32) -> i32 {

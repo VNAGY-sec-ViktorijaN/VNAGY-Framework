@@ -358,7 +358,7 @@ Why This Matters
 
 * VNAGY pipelines can reject hidden error logic.
 
-## Licensing
+# Licensing
 
 Licensed under VNAGY CC BY‑NC 4.0 Extended License.
 

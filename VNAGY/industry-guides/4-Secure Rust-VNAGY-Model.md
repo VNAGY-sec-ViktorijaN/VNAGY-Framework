@@ -20,9 +20,9 @@ fn update() {
     }
 }
 ```
-Good Example (Local State)
+### Good Example (Local State)
 
-```rrust
+```rust
 struct Value {
     v: i32,
 }
@@ -30,41 +30,44 @@ struct Value {
 fn update(val: &mut Value) {
     val.v += 1;
 }
-```r
-## Why Bad?
+```
+Why Bad?
 
-    Hidden mutation.
+* Hidden mutation.
 
-    Unsafe block bypasses compiler guarantees.
+* Unsafe block bypasses compiler guarantees.
 
-    Impossible to verify deterministically.
+* Impossible to verify deterministically.
 
-##Why Good?
+Why Good?
 
-    Fully explicit.
+* Fully explicit.
 
-    Compiler‑verified safety.
+* Compiler‑verified safety.
 
-    Predictable behavior.
+* Predictable behavior.
 
-4.2 No Global State
+---
+
+## 4.2 No Global State
 
 Global mutable state breaks determinism and violates VNAGY isolation rules.
-Bad Example (Global Counter)
-rust
 
+### Bad Example (Global Counter
+
+``` rust
 static mut COUNTER: u32 = 0;
-
 fn next() -> u32 {
     unsafe {
         COUNTER += 1;
         COUNTER
     }
 }
+```
 
-Good Example (Local State)
-rust
+### Good Example (Local State)
 
+```rust
 struct Counter {
     value: u32,
 }
@@ -73,31 +76,33 @@ fn next(c: &mut Counter) -> u32 {
     c.value += 1;
     c.value
 }
-
+```
 Why Bad?
 
-    Behavior depends on hidden state.
+* Behavior depends on hidden state.
 
-    Impossible to reproduce offline.
+* Impossible to reproduce offline.
 
-    Unsafe under concurrency.
+* Unsafe under concurrency.
 
 Why Good?
 
-    State is local and explicit.
+* State is local and explicit.
 
-    Deterministic transitions.
+* Deterministic transitions.
 
-    VNAGY‑compliant isolation.
+* VNAGY‑compliant isolation.
+  
+ ---
 
-4.3 No Randomness
+## 4.3 No Randomness
 
 Randomness breaks reproducibility and offline‑first guarantees.
-Bad Example (Random Offset)
-rust
 
+### Bad Example (Random Offset)
+
+``` rust
 use rand::Rng;
-
 fn offset(x: i32) -> i32 {
     x + rand::thread_rng().gen_range(0..10)
 }
@@ -108,24 +113,26 @@ rust
 fn offset(x: i32) -> i32 {
     x + 3
 }
-
+```
 Why Bad?
 
-    Output varies per execution.
+* Output varies per execution.
 
-    Impossible to verify deterministically.
+* Impossible to verify deterministically.
 
-    Violates VNAGY reproducibility.
+* Violates VNAGY reproducibility.
 
 Why Good?
 
-    Fully deterministic.
+* Fully deterministic.
 
-    Predictable and testable.
+* Predictable and testable.
 
-    Offline‑first safe.
+* offline‑first safe.
 
-4.5 No Runtime Code Generation
+---
+
+## 4.5 No Runtime Code Generation
 
 VNAGY prohibits:
 
@@ -137,9 +144,9 @@ VNAGY prohibits:
 
     proc‑macros that alter behavior based on environment
 
-Bad Example (Environment‑Dependent Macro)
-rust
+### Bad Example (Environment‑Dependent Macro)
 
+``` rust
 macro_rules! dynamic {
     () => {
         if cfg!(debug_assertions) {
@@ -147,15 +154,18 @@ macro_rules! dynamic {
         }
     };
 }
+```
 
-Good Example (Static Function)
-rust
+### Good Example (Static Function)
 
+```rust
 fn log_debug() {
     // explicit, deterministic behavior
 }
+```
+---
 
-4.6 Deterministic Memory Safety
+## 4.6 Deterministic Memory Safety
 
 Memory safety must be deterministic, not heuristic. VNAGY forbids:
 
@@ -181,9 +191,9 @@ Memory safety must be:
 
     free of runtime surprises
 
-Bad Example (Interior Mutability)
-rust
+### Bad Example (Interior Mutability)
 
+```rust
 use std::cell::RefCell;
 
 struct Data {
@@ -193,9 +203,10 @@ struct Data {
 fn update(d: &Data) {
     *d.v.borrow_mut() += 1;
 }
+```
 
-Good Example (Explicit Mutation)
-rust
+### Good Example (Explicit Mutation)
+```rust
 
 struct Data {
     v: i32,
@@ -204,22 +215,24 @@ struct Data {
 fn update(d: &mut Data) {
     d.v += 1;
 }
-
+```
 Why Bad?
 
-    Output varies per execution — behavior depends on runtime conditions.
+* Output varies per execution — behavior depends on runtime conditions.
 
-    Impossible to verify deterministically — nondeterministic paths break reproducibility.
+* Impossible to verify deterministically — nondeterministic paths break reproducibility.
 
-    Violates VNAGY reproducibility — pipelines require identical results across all runs.
+* Violates VNAGY reproducibility — pipelines require identical results across all runs.
 
 Why Good?
 
-    Fully deterministic — identical inputs always produce identical outputs.
+* Fully deterministic — identical inputs always produce identical outputs.
 
-    Predictable and testable — transparent and reproducible behavior.
+* Predictable and testable — transparent and reproducible behavior.
 
-    Offline‑first safe — deterministic execution ensures compatibility with VNAGY’s model.
+* Offline‑first safe — deterministic execution ensures compatibility with VNAGY’s model.
+
+---
 
 4.7 Secure Rust Module Boundaries
 
@@ -235,9 +248,9 @@ Modules must be:
 
     isolated
 
-Bad Example (Implicit Cross‑Module Access)
-rust
+### Bad Example (Implicit Cross‑Module Access)
 
+```rust
 mod a {
     pub static mut VALUE: i32 = 0;
 }
@@ -247,10 +260,11 @@ mod b {
         unsafe { a::VALUE += 1; }
     }
 }
+```
 
 Good Example (Explicit Interface)
-rust
 
+```rust
 mod a {
     pub struct Value { pub v: i32 }
 }
@@ -260,28 +274,30 @@ mod b {
         val.v += 1;
     }
 }
-
+```
 Why Bad?
 
-    Implicit cross‑module mutation — violates VNAGY isolation rules.
+* Implicit cross‑module mutation — violates VNAGY isolation rules.
 
-    Global mutable state — introduces nondeterministic behavior.
+* Global mutable state — introduces nondeterministic behavior.
 
-    Unsafe access path — compiler cannot verify correctness.
+* Unsafe access path — compiler cannot verify correctness.
 
-    Non‑reproducible behavior — hidden mutation breaks offline‑first reproducibility.
+* Non‑reproducible behavior — hidden mutation breaks offline‑first reproducibility.
 
 Why Good?
 
-    Explicit interface — clear and deterministic API.
+* Explicit interface — clear and deterministic API.
 
-    No global state — all state is local and owned.
+* No global state — all state is local and owned.
 
-    Compiler‑verified safety — mutation through &mut.
+*  Compiler‑verified safety — mutation through &mut.
 
-    Deterministic and isolated — aligned with VNAGY module‑design rules.
+* deterministic and isolated — aligned with VNAGY module‑design rules.
 
-4.8 Secure Rust Concurrency (Symbolic)
+---
+
+## 4.8 Secure Rust Concurrency (Symbolic)
 
 Deterministic patterns only — no runtime variability.
 
@@ -300,42 +316,56 @@ VNAGY concurrency is symbolic, not operational:
     no hidden mutation
 
 Concurrency is represented mathematically, not executed.
-Bad Example (Thread Race)
-rust
 
+```Bad Example (Thread Race)
+rust
 use std::thread;
 
 fn race() {
     let mut x = 0;
     thread::spawn(|| { x += 1; });
 }
+```
 
 Good Example (Symbolic Concurrency)
-rust
 
+```rust
 fn symbolic_concurrency(input: i32) -> i32 {
     // deterministic, no threads, no races
     input + 1
 }
+```
 
 Why Bad?
 
-    Nondeterministic scheduling — thread order varies.
+* Nondeterministic scheduling — thread order varies.
 
-    Hidden mutation — shared state mutated without ownership.
+* Hidden mutation — shared state mutated without ownership.
 
-    Impossible to verify deterministically — runtime scheduling breaks reproducibility.
+* Impossible to verify deterministically — runtime scheduling breaks reproducibility.
 
-    Potential data races — undefined behavior and nondeterministic failure modes.
+* Potential data races — undefined behavior and nondeterministic failure modes.
 
 Why Good?
 
-    Fully deterministic — identical inputs → identical outputs.
+* Fully deterministic — identical inputs → identical outputs.
 
-    No runtime scheduling — symbolic representation only.
+* No runtime scheduling — symbolic representation only.
 
-    Predictable and testable — reproducible across environments.
+* Predictable and testable — reproducible across environments.
 
-    Offline‑first safe — compatible with VNAGY’s security model.
+* Offline‑first safe — compatible with VNAGY’s security model.
 
-Code
+---
+
+# Licensing
+
+Licensed under VNAGY CC BY‑NC 4.0 Extended License.
+
+Short documents may use VNAGY Minimal License (PSDL‑1.3).
+© Viktorija Nađ, 2026 — All Rights Reserved.
+
+License files are available here:
+https://github.com/VNAGY-sec-ViktorijaN/VNAGY-Framework/tree/main/VNAGY/LICENSE
+
+

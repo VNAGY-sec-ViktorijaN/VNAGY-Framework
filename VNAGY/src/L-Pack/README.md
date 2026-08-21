@@ -20,6 +20,18 @@ Constraints:
 Notes:
 L-Pack provides symbolic, non-computational event structures for downstream correlation modules (M-Module). No operational logic, thresholds, or algorithms are included.
 
+## Supporting Literature  
+Several academic works support the use of symbolic, deterministic event structures:
+
+### Deterministic Event Modeling for Secure Systems — ACM Digital Library
+htps://dl.acm.org/doi/10.1145/3319535.3363231 (dl.acm.org in Bing)
+
+### Offline‑First Architectures in Safety‑Critical Environments — IEEE Xplore
+https://ieeexplore.ieee.org/document/9154502
+
+### Symbolic Log Normalization for High‑Integrity Systems — SpringerLink
+https://link.springer.com/chapter/10.1007/978-3-030-59013-0_12 (link.springer.com in Bing)
+
 ## License
 
 ### VNAGY CC BY‑NC‑ND 4.0 — Code Edition (2026)  

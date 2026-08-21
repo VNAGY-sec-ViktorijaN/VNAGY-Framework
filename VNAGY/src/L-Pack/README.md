@@ -24,7 +24,7 @@ L-Pack provides symbolic, non-computational event structures for downstream corr
 Several academic works support the use of symbolic, deterministic event structures:
 
 ### Deterministic Event Modeling for Secure Systems — ACM Digital Library
-htps://dl.acm.org/doi/10.1145/3319535.3363231 (dl.acm.org in Bing)
+https://dl.acm.org/doi/10.1145/3319535.3363231 (dl.acm.org in Bing)
 
 ### Offline‑First Architectures in Safety‑Critical Environments — IEEE Xplore
 https://ieeexplore.ieee.org/document/9154502
